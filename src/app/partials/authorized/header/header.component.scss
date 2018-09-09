@@ -1,0 +1,86 @@
+header {
+  padding: 8px 40px;
+  background: #393939;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+
+      &.no-carret {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      a {
+        color: #ccc;
+
+        .fas {
+          font-size: 25px;
+        }
+
+        .account-setting {
+          display: inline;
+
+          img {
+            border-radius: 100%;
+            height: 45px;
+            width: 45px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        border: 0px;
+
+        &.show {
+          transform: translateY(20px);
+        }
+      }
+    }
+  }
+
+  .logo-cont {
+    display: flex;
+    justify-content: flex-start;
+    width: 20%;
+
+    img {
+      object-fit: contain;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .menu-cont {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+
+    ul {
+      li {
+        a {
+          .fas {
+            font-size: 16px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .tool-cont {
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+  }
+}

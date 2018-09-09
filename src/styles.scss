@@ -1,18 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+// imports
+@import './assets/scss/font-face';
 
-// dropdown smooth animation
-.dropdown-menu {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: .5s ease all;
+// base styles
+html,
+body {
+    font-family: 'Poppins', 'Montserrat', 'Arial';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
-    &.show {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0px);
-        transition: .5s ease all;
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 15px; }
+h6 { font-size: 13px; }
+
+.title-1 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.title-2 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.title-3 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 24px;
+    color: #333;
+
+    i {
+        margin-right: 13px;
+        vertical-align: baseline;
     }
+}
+
+.title-4 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #393939;
+}
+
+.title-5 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    color: #393939;
+}
+
+.title-6 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
 }
