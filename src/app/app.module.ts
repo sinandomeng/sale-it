@@ -23,6 +23,7 @@ import { UFooterComponent } from './partials/unauthorized/footer/footer.componen
 
 // Services
 import { SeoService } from '../app/services/seo.service'
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SeoService } from '../app/services/seo.service'
     LoginComponent,
     ContactComponent,
     ProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

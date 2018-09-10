@@ -11,6 +11,9 @@ import { LoginComponent } from './views/login/login.component'
 import { DashboardComponent } from './views/authorized/dashboard/dashboard.component'
 import { ProfileComponent } from './views/authorized/profile/profile.component'
 
+// 404 Page Not Found
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component'
+
 const routes: Routes = [
   // Unauthorized Routes
   { path: '',           component: HomeComponent },
@@ -20,7 +23,10 @@ const routes: Routes = [
 
   // Authorized Routes
   { path: 'dashboard',  component: DashboardComponent },
-  { path: 'profile',    component: ProfileComponent }
+  { path: 'profile',    component: ProfileComponent },
+
+  // 404 Page Not Found
+  { path: '**',         component: PageNotFoundComponent }
 ]
 
 @NgModule({
