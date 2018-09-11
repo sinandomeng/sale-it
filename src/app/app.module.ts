@@ -1,20 +1,23 @@
-// Angular Core and Plugins
-import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-import { AngularFireModule } from 'angularfire2'
-import { AngularFireAuthModule } from 'angularfire2/auth'
+// Angular Core
+import { BrowserModule }             from '@angular/platform-browser'
+import { NgModule }                  from '@angular/core'
+
+// Plugins
+import { AngularFireModule }         from 'angularfire2'
+import { AngularFireAuthModule }     from 'angularfire2/auth'
 import { AngularFireDatabaseModule } from 'angularfire2/database'
 
 // Unauthorized Views
-import { AppRoutingModule } from './app-routing.module'
-import { AppComponent } from './app.component'
-import { HomeComponent } from './views/home/home.component'
-import { LoginComponent } from './views/login/login.component'
-import { AboutComponent } from './views/about/about.component'
-import { ContactComponent } from './views/contact/contact.component'
+import { AppRoutingModule }  from './app-routing.module'
+import { AppComponent }      from './app.component'
+import { HomeComponent }     from './views/home/home.component'
+import { AboutComponent }    from './views/about/about.component'
+import { ContactComponent }  from './views/contact/contact.component'
+import { LoginComponent }    from './views/login/login.component'
+import { RegisterComponent } from './views/register/register.component'
 
 // Authorized Views
-import { ProfileComponent } from './views/authorized/profile/profile.component'
+import { ProfileComponent }   from './views/authorized/profile/profile.component'
 import { DashboardComponent } from './views/authorized/dashboard/dashboard.component'
 
 // Partials
@@ -25,9 +28,8 @@ import { UFooterComponent } from './partials/unauthorized/footer/footer.componen
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component'
 
 // Services
-import { SeoService } from './services/seo/seo.service'
-import { UserService } from './services/user/user.service';
-import { RegisterComponent } from './views/register/register.component'
+import { SeoService }  from './services/seo/seo.service'
+import { UserService } from './services/user/user.service'
 
 @NgModule({
   declarations: [
