@@ -1,11 +1,12 @@
 // Angular Core
 import { BrowserModule }             from '@angular/platform-browser'
 import { NgModule }                  from '@angular/core'
+import { environment }               from '../environments/environment.prod'
 
 // Plugins
-import { AngularFireModule }         from 'angularfire2'
-import { AngularFireAuthModule }     from 'angularfire2/auth'
-import { AngularFireDatabaseModule } from 'angularfire2/database'
+import { AngularFireModule }         from '@angular/fire'
+import { AngularFireAuthModule }     from '@angular/fire/auth'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
 
 // Unauthorized Views
 import { AppRoutingModule }  from './app-routing.module'
@@ -50,14 +51,7 @@ import { UserService } from './services/user/user.service'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp({
-      apiKey: 'AIzaSyBqm7fLf7lYKkEBZ22dDV0SmYV1EzH632I',
-      authDomain: 'saleit-df27f.firebaseapp.com',
-      databaseURL: 'https://saleit-df27f.firebaseio.com',
-      projectId: 'saleit-df27f',
-      storageBucket: 'saleit-df27f.appspot.com',
-      messagingSenderId: '281109424181'
-    }),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
