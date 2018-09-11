@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core'
-import { SeoService } from '../../services/seo.service'
+import { SeoService } from '../../services/seo/seo.service'
+import { UserService } from '../../services/user/user.service'
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private setSeo: SeoService
+    private setSeo: SeoService,
+    public userSvc: UserService
   ) { }
 
   ngOnInit() {

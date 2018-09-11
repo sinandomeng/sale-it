@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core'
-import { SeoService } from '../../services/seo.service'
+import { SeoService } from '../../services/seo/seo.service'
 
 @Component({
   selector: 'app-contact',

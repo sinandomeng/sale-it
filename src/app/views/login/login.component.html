@@ -1,5 +1,14 @@
 <unauthorized-header></unauthorized-header>
 
-<h1 class="title-1">Login Page!</h1>
+<div *ngIf="userSvc.uid | async as uid; else login">
+    The user is logged in with an ID of {{ uid }}
+
+    <div *ngIf="userSvc.isAdmin | async"> The user has the admin super power. </div>
+    <div><button (click)="userSvc.doLogout()">Logout</button></div>
+</div>
+
+<ng-template #login>
+    You need to login. <button (click)="userSvc.doLogin()">Login</button>
+</ng-template>
 
 <unauthorized-footer></unauthorized-footer>
