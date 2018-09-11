@@ -1,12 +1,7 @@
 // Angular Core and Plugins
-import { BrowserModule }            from '@angular/platform-browser'
-import { NgModule }                 from '@angular/core'
-import { HttpClientModule }         from '@angular/common/http'
-import { AngularFireModule }        from '@angular/fire'
-import { AngularFirestoreModule }   from '@angular/fire/firestore'
-import { AngularFireStorageModule } from '@angular/fire/storage'
-import { AngularFireAuthModule }    from '@angular/fire/auth'
-import { environment }              from '../environments/environment'
+import { BrowserModule }    from '@angular/platform-browser'
+import { NgModule }         from '@angular/core'
+import { HttpClientModule } from '@angular/common/http'
 
 // Unauthorized Views
 import { AppRoutingModule } from './app-routing.module'
@@ -25,11 +20,10 @@ import { AHeaderComponent } from './partials/authorized/header/header.component'
 import { AFooterComponent } from './partials/authorized/footer/footer.component'
 import { UHeaderComponent } from './partials/unauthorized/header/header.component'
 import { UFooterComponent } from './partials/unauthorized/footer/footer.component'
-import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component'
 
 // Services
 import { SeoService } from '../app/services/seo.service'
-import { AuthService } from '../app/services/auth.service'
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -49,15 +43,10 @@ import { AuthService } from '../app/services/auth.service'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase, 'SaleIT'),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule
+    HttpClientModule
   ],
   providers: [
-    SeoService,
-    AuthService
+    SeoService
   ],
   bootstrap: [AppComponent]
 })
