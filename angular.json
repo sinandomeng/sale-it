@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SaleIT": {
+    "sale-it": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SaleIT",
+            "outputPath": "dist/sale-it",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SaleIT:build"
+            "browserTarget": "sale-it:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SaleIT:build:production"
+              "browserTarget": "sale-it:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SaleIT:build"
+            "browserTarget": "sale-it:build"
           }
         },
         "test": {
@@ -111,7 +111,7 @@
         }
       }
     },
-    "SaleIT-e2e": {
+    "sale-it-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -119,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SaleIT:serve"
+            "devServerTarget": "sale-it:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SaleIT:serve:production"
+              "devServerTarget": "sale-it:serve:production"
             }
           }
         },
@@ -139,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "SaleIT"
+  "defaultProject": "sale-it"
 }
