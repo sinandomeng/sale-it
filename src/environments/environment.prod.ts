@@ -1,11 +1,11 @@
 export const environment = {
-  production: true,
+  production: false,
   firebase: {
     apiKey: 'AIzaSyBqm7fLf7lYKkEBZ22dDV0SmYV1EzH632I',
-    authDomain: 'saleit-df27f.firebaseapp.com',
-    databaseURL: 'https://saleit-df27f.firebaseio.com',
-    projectId: 'saleit-df27f',
-    storageBucket: 'saleit-df27f.appspot.com',
+    authDomain: 'SaleIT-df27f.firebaseapp.com',
+    databaseURL: 'https://SaleIT-df27f.firebaseio.com',
+    projectId: 'SaleIT-df27f',
+    storageBucket: 'SaleIT-df27f.appspot.com',
     messagingSenderId: '281109424181'
   }
 };
