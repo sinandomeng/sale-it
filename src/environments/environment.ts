@@ -11,7 +11,8 @@ export const environment = {
     projectId: 'SaleIT-df27f',
     storageBucket: 'SaleIT-df27f.appspot.com',
     messagingSenderId: '281109424181'
-  }
+  },
+  API_URL: 'http://localhost:8080'
 };
 
 /*

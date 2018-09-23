@@ -1,7 +1,10 @@
 // Angular Core
-import { BrowserModule }             from '@angular/platform-browser'
-import { NgModule }                  from '@angular/core'
-import { environment }               from '../environments/environment.prod'
+import { BrowserModule }                    from '@angular/platform-browser'
+import { NgModule }                         from '@angular/core'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { HttpModule }                       from '@angular/http'
+import { HttpClientModule }                 from '@angular/common/http'
+import { environment }                      from '../environments/environment.prod'
 
 // Plugins
 import { AngularFireModule }         from '@angular/fire'
@@ -32,6 +35,9 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { SeoService }  from './services/seo/seo.service'
 import { UserService } from './services/user/user.service'
 
+// Guards
+import { AuthGuard } from './guards/auth/auth.guard';
+
 @NgModule({
   declarations: [
     AHeaderComponent,
@@ -49,15 +55,18 @@ import { UserService } from './services/user/user.service'
     RegisterComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    HttpModule, HttpClientModule,
+    FormsModule, ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
   providers: [
     SeoService,
-    UserService
+    UserService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

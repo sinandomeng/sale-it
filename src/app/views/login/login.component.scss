@@ -1,0 +1,10 @@
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 56px);
+    
+    .card {
+        width: 360px;
+    }
+}
