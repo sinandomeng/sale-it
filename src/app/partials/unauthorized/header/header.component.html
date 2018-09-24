@@ -18,10 +18,15 @@
                     <a class="nav-link" routerLink="/contact-us">Contact</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                    <a class="nav-link" routerLink="/login">Login</a>
                 </li>
-                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isAuth">
+                    <a class="nav-link" routerLink="/login" *ngIf="!isAuth">Login</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isAuth">
                     <a class="nav-link" routerLink="/register">Register</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="isAuth">
+                    <a class="nav-link" routerLink="/dashboard" *ngIf="isAuth">Dashboard</a>
                 </li>
             </ul>
         </div>

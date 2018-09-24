@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UHeaderComponent implements OnInit {
 
+  isAuth: Boolean = !!localStorage.getItem('authDto')
+
   constructor() { }
 
   ngOnInit() {

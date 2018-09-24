@@ -1,17 +1,16 @@
-import { Injectable } from '@angular/core';
-import { of as observableOf } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { map, switchMap } from 'rxjs/operators';
-import { auth } from 'firebase';
-import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment.prod';
+import { Injectable } from "@angular/core";
+import { of as observableOf } from "rxjs";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { AngularFireDatabase } from "@angular/fire/database";
+import { map, switchMap } from "rxjs/operators";
+import { auth } from "firebase";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class UserService {
-
   uid = this.afAuth.authState.pipe(
     map(authState => {
       if (!authState) {
@@ -26,7 +25,7 @@ export class UserService {
       if (!uid) {
         return observableOf(false);
       } else {
-        return this.db.object('/admins/' + uid).valueChanges()
+        return this.db.object("/admins/" + uid).valueChanges();
       }
     })
   );
@@ -35,7 +34,7 @@ export class UserService {
     private http: HttpClient,
     private afAuth: AngularFireAuth,
     private db: AngularFireDatabase
-  ) { }
+  ) {}
 
   // doLogin() {
   //   this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
@@ -46,18 +45,12 @@ export class UserService {
   // }
 
   doLogin(data) {
-    const self = this
-    const url = environment.API_URL + '/users/login'
-    
-    self.http.post(url, data).subscribe(data => {
-      return data
-    }, err => {
-      return err
-    });
+    return this.http.post(environment.API_URL + "/users/login", data);
   }
 
-  doLogout() {
-
+  doRegister(data) {
+    return this.http.post(environment.API_URL + "/users/register", data);
   }
 
+  doLogout() {}
 }

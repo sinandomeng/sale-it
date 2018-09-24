@@ -7,11 +7,10 @@ import { SeoService } from '../../services/seo/seo.service'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private setSeo: SeoService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.setSeo.generateTags({
@@ -19,5 +18,4 @@ export class HomeComponent implements OnInit {
       description: 'Some kind of description for home page.'
     })
   }
-
 }

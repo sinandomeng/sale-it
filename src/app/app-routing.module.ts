@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 
 // Guards
-import { AuthGuard } from './guards/auth/auth.guard';
+import { AuthenticatedGuard } from './guards/authorized/auth.guard';
 
 // Unauthorized Views
 import { HomeComponent }     from './views/home/home.component'
@@ -27,8 +27,8 @@ const routes: Routes = [
   { path: 'register',   component: RegisterComponent },
 
   // Authorized Routes
-  { path: 'dashboard',  component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'profile',    component: ProfileComponent,   canActivate: [AuthGuard] },
+  { path: 'dashboard',  component: DashboardComponent, canActivate: [AuthenticatedGuard] },
+  { path: 'profile',    component: ProfileComponent,   canActivate: [AuthenticatedGuard] },
 
   // 404 Page Not Found
   { path: '**',         component: PageNotFoundComponent }

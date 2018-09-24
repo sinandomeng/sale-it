@@ -8,5 +8,5 @@ export const environment = {
     storageBucket: 'SaleIT-df27f.appspot.com',
     messagingSenderId: '281109424181'
   },
-  API_URL: 'http://localhost:8080'
+  API_URL: 'http://sale-it-api.herokuapp.com'
 };
