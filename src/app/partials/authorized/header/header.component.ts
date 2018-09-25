@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 declare var jQuery: any
 
@@ -13,12 +13,16 @@ export class AHeaderComponent implements OnInit {
 
   ngOnInit() {
     jQuery('.dropdown').on('show.bs.dropdown', function (e) {
-      jQuery(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
-    });
+      jQuery(this).find('.dropdown-menu').first().stop(true, true).slideDown(300)
+    })
 
     jQuery('.dropdown').on('hide.bs.dropdown', function (e) {
-      jQuery(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
-    });
+      jQuery(this).find('.dropdown-menu').first().stop(true, true).slideUp(200)
+    })
+  }
+
+  logout() {
+    localStorage.removeItem('authDto')
   }
 
 }

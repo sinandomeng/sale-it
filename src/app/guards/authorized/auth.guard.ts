@@ -12,20 +12,21 @@ export class AuthenticatedGuard implements CanActivate {
   ) { }
 
   canActivate() {
-    let authDto = localStorage.getItem('authDto')
-    let currentTime = Date.now() / 1000
+    const self = this
+    const authDto = localStorage.getItem('authDto')
+    const currentTime = Date.now() / 1000
 
     if (!!authDto) {
-      let userToken = JWTDecoder(JSON.parse(authDto).token)
+      const userToken = JWTDecoder(JSON.parse(authDto).token)
 
       if (userToken['exp'] > currentTime) {
         return true
       }
 
-      this.router.navigate(['/login'])
+      self.router.navigate(['/login'])
       return false
     } else {
-      this.router.navigate(['/login'])
+      self.router.navigate(['/login'])
       return false
     }
   }

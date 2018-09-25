@@ -36,7 +36,7 @@ import { SeoService }  from './services/seo/seo.service'
 import { UserService } from './services/user/user.service'
 
 // Guards
-import { AuthenticatedGuard } from './guards/authorized/auth.guard';
+import { AuthenticatedGuard } from './guards/authorized/auth.guard'
 
 @NgModule({
   declarations: [

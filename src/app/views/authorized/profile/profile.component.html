@@ -2,7 +2,14 @@
     <authorized-header></authorized-header>
 
     <div class="main-content">
-        <h1 class="title-1">Profile Page!</h1>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col">
+                    <h3 class="title-3">Welcome {{ (authDto.userDto.name) ? authDto.userDto.name : authDto.userDto.email }}</h3>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </div>
 
     <authorized-footer></authorized-footer>
