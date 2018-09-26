@@ -5,10 +5,115 @@
         <div class="container">
             <div class="row mt-4">
                 <div class="col">
-                    <h3 class="title-3">Welcome {{ (authDto.userDto.name) ? authDto.userDto.name : authDto.userDto.email }}</h3>
+                    <h3 class="title-3">Manage Account</h3>
                     <hr>
                 </div>
             </div>
+
+            <!-- #region - Display Picture Field -->
+            <div class="row mt-4">
+                <div class="col-sm-4 align-self-center">
+                    <h3 class="title-3">Display Picture</h3>
+                    <p>This is your public avatar. Feel free to change this.</p>
+                </div>
+                <div class="col-sm-8">
+                    <div class="dp-cont">
+                        <img src="{{ env.API_URL + '/' + userDto.image }}" alt="Display Picture">
+                        <input type="file" (change)="onFileSelected($event)" />
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion - End of Display Picture Field -->
+            
+            <hr class="mt-4 mb-5">
+
+            <!-- #region - Profile Field -->
+            <div class="row mt-4">
+                <div class="col-sm-4 align-self-center">
+                    <h3 class="title-3">Profile</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <div class="col-sm-8">
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2 align-self-center">
+                                    Name
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" value="{{ userDto.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-2 align-self-center">
+                                    Email
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="email" class="form-control" value="{{ userDto.email }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary mr-1">Save</button>
+                            <button type="reset" class="btn btn-link ml-1">Cancel</button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- #endregion - End of Profile Field -->
+
+            <hr class="mt-4 mb-5">
+
+            <!-- #region - Change Password Field -->
+            <div class="row mt-4">
+                <div class="col-sm-4 align-self-center">
+                    <h3 class="title-3">Change Password</h3>
+                    <p>It is safe to regularly change password. You can do so using this block.</p>
+                </div>
+                <div class="col-sm-8">
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4 align-self-center">
+                                    Current Password
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4 align-self-center">
+                                    New Password
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4 align-self-center">
+                                    Confirm New Password
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary mr-1">Save</button>
+                            <button type="reset" class="btn btn-link ml-1">Cancel</button>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- #endregion - End of Change Password Field -->
         </div>
     </div>
 

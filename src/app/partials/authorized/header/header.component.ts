@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { environment } from '../../../../environments/environment'
 
 declare var jQuery: any
 
@@ -9,16 +10,13 @@ declare var jQuery: any
 })
 export class AHeaderComponent implements OnInit {
 
+  env: Object = environment
+  userDto: JSON = JSON.parse(localStorage.getItem('authDto')).userDto
+
   constructor() { }
 
   ngOnInit() {
-    jQuery('.dropdown').on('show.bs.dropdown', function (e) {
-      jQuery(this).find('.dropdown-menu').first().stop(true, true).slideDown(300)
-    })
-
-    jQuery('.dropdown').on('hide.bs.dropdown', function (e) {
-      jQuery(this).find('.dropdown-menu').first().stop(true, true).slideUp(200)
-    })
+    
   }
 
   logout() {

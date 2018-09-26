@@ -1,1 +1,17 @@
 @import '../../../../assets/scss/auth-global.scss';
+
+.dp-cont {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    input[type=file] {
+        display: none;
+    }
+}

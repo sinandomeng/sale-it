@@ -21,8 +21,8 @@ export class RegisterComponent implements OnInit {
   ) {
     // reactive form for registration
     this.registrationForm = this.FBuilder.group({
-      email:    ['jane@doe.com', [Validators.required, Validators.email]],
-      password: ['Password', [Validators.required]]
+      email:    [null, [Validators.required, Validators.email]],
+      password: [null, [Validators.required]]
     })
   }
 

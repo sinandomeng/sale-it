@@ -29,9 +29,9 @@
                                 <p class="input-error-text" *ngIf="registrationForm.controls['password'].hasError('required')">Password is required</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
                             <input type="submit" class="btn btn-primary" value="Register" [disabled]="registrationForm.controls['email'].invalid || registrationForm.controls['password'].invalid">
-                            <a routerLink="/login" class="btn btn-info">Login</a>
+                            <a routerLink="/login" class="btn btn-link">Cancel</a>
                         </div>
                     </form>
                 </div>

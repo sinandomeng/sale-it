@@ -6,14 +6,14 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyBqm7fLf7lYKkEBZ22dDV0SmYV1EzH632I',
-    authDomain: 'SaleIT-df27f.firebaseapp.com',
-    databaseURL: 'https://SaleIT-df27f.firebaseio.com',
-    projectId: 'SaleIT-df27f',
-    storageBucket: 'SaleIT-df27f.appspot.com',
+    authDomain: 'sale-it-df27f.firebaseapp.com',
+    databaseURL: 'https://sale-it-df27f.firebaseio.com',
+    projectId: 'sale-it-df27f',
+    storageBucket: 'sale-it-df27f.appspot.com',
     messagingSenderId: '281109424181'
   },
   API_URL: 'http://localhost:8080'
-};
+}
 
 /*
  * In development mode, for easier debugging, you can ignore zone related error

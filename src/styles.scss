@@ -88,22 +88,6 @@ input {
     }
 }
 
-.dropdown-menu {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: .5s ease all;
-
-    &.show {
-        display: block;
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0px);
-        transition: .5s ease all;
-    }
-}
-
 .main-container {
     display: flex;
     flex-direction: column;
