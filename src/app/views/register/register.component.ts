@@ -10,7 +10,6 @@ import { first } from 'rxjs/operators'
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
   registrationForm: any
 
   constructor(
@@ -21,12 +20,17 @@ export class RegisterComponent implements OnInit {
   ) {
     // reactive form for registration
     this.registrationForm = this.FBuilder.group({
+      name:     [null, [Validators.required]],
       email:    [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required]]
     })
   }
 
   ngOnInit() {
+    this.setSeo.generateTags({
+      title: 'SaleIT | Registration Page',
+      description: 'Some kind of description for Registration page.'
+    })
   }
 
   registrationSubmit() {
@@ -34,16 +38,17 @@ export class RegisterComponent implements OnInit {
     const formValue = self.registrationForm.value
 
     if (self.registrationForm.valid) {
-      self.userSvc.doRegister(formValue)
-            .pipe(first())
-            .subscribe(
-                data => {
-                  console.log(data)
-                },
-                error => {
-                  console.log(error)
-                })
+      self.userSvc
+        .doRegister(formValue)
+        .pipe(first())
+        .subscribe(
+          data => {
+            console.log(data)
+          },
+          error => {
+            console.log(error)
+          }
+        )
     }
   }
-
 }

@@ -10,14 +10,19 @@
                 <div class="card-body">
                     <form [formGroup]="registrationForm" (ngSubmit)="registrationSubmit()" novalidate>
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Full Name</label>
+                            <input type="text" class="form-control" name="email" formControlName="name" [ngClass]="{'input-error': registrationForm.controls['name'].touched && registrationForm.controls['name'].invalid}" />
+
+                            <div class="error-container" *ngIf="registrationForm.controls['name'].touched && registrationForm.controls['name'].invalid">
+                                <p class="input-error-text" *ngIf="registrationForm.controls['name'].hasError('required')">Email address is required</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" name="email" formControlName="email" [ngClass]="{'input-error': registrationForm.controls['email'].touched && registrationForm.controls['email'].invalid}" />
 
                             <div class="error-container" *ngIf="registrationForm.controls['email'].touched && registrationForm.controls['email'].invalid">
                                 <p class="input-error-text" *ngIf="registrationForm.controls['email'].hasError('required')">Email address is required</p>
-                            </div>
-                            
-                        <div class="form-group">
                                 <p class="input-error-text" *ngIf="registrationForm.controls['email'].hasError('email')">Please enter a valid email address</p>
                             </div>
                         </div>

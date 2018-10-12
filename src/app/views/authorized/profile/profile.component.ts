@@ -9,8 +9,8 @@ import { environment } from '../../../../environments/environment'
 })
 export class ProfileComponent implements OnInit {
 
-  env: Object = environment
-  userDto: JSON = JSON.parse(localStorage.getItem('authDto')).userDto
+  env: any = environment
+  userDto: any = JSON.parse(localStorage.getItem('authDto')).userDto
   userImg: File = null
 
   constructor(

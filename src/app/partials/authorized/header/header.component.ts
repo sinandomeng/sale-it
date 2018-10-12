@@ -10,8 +10,8 @@ declare var jQuery: any
 })
 export class AHeaderComponent implements OnInit {
 
-  env: Object = environment
-  userDto: JSON = JSON.parse(localStorage.getItem('authDto')).userDto
+  env: any = environment
+  userDto: any = JSON.parse(localStorage.getItem('authDto')).userDto
 
   constructor() { }
 

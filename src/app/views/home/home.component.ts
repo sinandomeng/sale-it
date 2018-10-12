@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     private setSeo: SeoService
   ) {}
-
+  
   ngOnInit() {
     this.setSeo.generateTags({
       title: 'SaleIT | Home Page',

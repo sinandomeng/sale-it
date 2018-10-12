@@ -1,25 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { AHeaderComponent } from './header.component';
+import { AHeaderComponent } from './header.component'
 
 describe('AHeaderComponent', () => {
-  let component: AHeaderComponent;
-  let fixture: ComponentFixture<AHeaderComponent>;
+  let component: AHeaderComponent
+  let fixture: ComponentFixture<AHeaderComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ AHeaderComponent ]
     })
-    .compileComponents();
-  }));
+    .compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AHeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(AHeaderComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
