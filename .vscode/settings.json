@@ -28,11 +28,11 @@
   "tslint.autoFixOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  "workbench.editor.enablePreview": false,
-  "workbench.startupEditor": "welcomePage",
-  "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.colorCustomizations": {
     "editor.background": "#1c1c1c"
   },
-  "window.zoomLevel": 0,
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.startupEditor": "welcomePage",
+  "window.zoomLevel": 0
 }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 
 // Guards
-import { AuthenticatedGuard } from './guards/authorized/auth.guard';
+import { AuthenticatedGuard } from './guards/authorized/auth.guard'
 
 // Unauthorized Views
 import { HomeComponent }     from './views/home/home.component'
